@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ProfileCardDetailsSection: UIView {
   
@@ -38,7 +39,7 @@ class ProfileCardDetailsSection: UIView {
     
     self.hiddenAccountLabel.snp_makeConstraints { (make) in
       make.top.equalTo(lockIconImageView.snp_bottom).offset(8.0).priorityRequired()
-      make.bottom.greaterThanOrEqualTo(profileHiddenView).offset(-16.0).priority(990.0)
+      make.bottom.lessThanOrEqualTo(profileHiddenView).offset(-16.0).priority(980.0)
       make.left.right.equalTo(profileHiddenView)
       make.centerX.equalTo(lockIconImageView)
     }
@@ -52,9 +53,23 @@ class ProfileCardDetailsSection: UIView {
     self.profileHiddenView.addSubview(hiddenAccountLabel)
   }
   
+  // MARK: - Actions
+  internal func shouldShowContent(showContent: Bool) {
+    if showContent == true {
+      self.profileHiddenView.alpha = 1.0
+      UIView.animateWithDuration(0.30, animations: { 
+        self.profileHiddenView.alpha = 0.0
+      })
+    }
+    else {
+      self.profileHiddenView.alpha = 1.0
+    }
+  }
+  
   // MARK: - Lazy Instances
   internal lazy var profileHiddenView: UIView = {
     let view: UIView = UIView()
+    view.backgroundColor = UIColor.redColor()
     return view
   }()
   
@@ -68,7 +83,7 @@ class ProfileCardDetailsSection: UIView {
   
   internal lazy var hiddenAccountLabel: UILabel = {
     let label: UILabel = UILabel()
-    label.font = UIFont.systemFontOfSize(16.0, weight: UIFontWeightUltraLight)
+    label.font = UIFont.systemFontOfSize(14.0, weight: UIFontWeightUltraLight)
     label.textColor = UIColor.grayColor()
     label.text = "P R O F I L E  I S  H I D D E N"
     label.textAlignment = .Center
