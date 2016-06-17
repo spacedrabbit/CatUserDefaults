@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		140113A11D14668500E6A160 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140113A01D14668500E6A160 /* AppDelegate.swift */; };
-		140113A61D14668500E6A160 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140113A41D14668500E6A160 /* Main.storyboard */; };
 		140113A81D14668500E6A160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140113A71D14668500E6A160 /* Assets.xcassets */; };
 		140113AB1D14668500E6A160 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140113A91D14668500E6A160 /* LaunchScreen.storyboard */; };
 		14232FF51D146C1F00259C27 /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14232FF31D146C1F00259C27 /* FollowButton.swift */; };
 		14232FF61D146C1F00259C27 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14232FF41D146C1F00259C27 /* ProfileViewController.swift */; };
+		14232FFC1D14789300259C27 /* ProfileCardInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14232FFB1D14789300259C27 /* ProfileCardInfoSection.swift */; };
+		14232FFE1D147D5500259C27 /* StyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14232FFD1D147D5500259C27 /* StyleHelper.swift */; };
+		142330021D1487BE00259C27 /* ProfileCardDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142330011D1487BE00259C27 /* ProfileCardDetailsSection.swift */; };
 		9949CD6DA66DC10277CFE9AD /* Pods_CatUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A365C8258FA7AC48FFC678B5 /* Pods_CatUserDefaults.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +22,14 @@
 		0D9D5E60E99053C5AFEFDBC4 /* Pods-CatUserDefaults.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatUserDefaults.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CatUserDefaults/Pods-CatUserDefaults.debug.xcconfig"; sourceTree = "<group>"; };
 		1401139D1D14668500E6A160 /* CatUserDefaults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatUserDefaults.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		140113A01D14668500E6A160 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		140113A51D14668500E6A160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		140113A71D14668500E6A160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		140113AA1D14668500E6A160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		140113AC1D14668500E6A160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14232FF31D146C1F00259C27 /* FollowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowButton.swift; path = ../../catthoughtsFollowButton/FollowButton/FollowButton.swift; sourceTree = "<group>"; };
 		14232FF41D146C1F00259C27 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../catthoughtsFollowButton/FollowButton/ProfileViewController.swift; sourceTree = "<group>"; };
+		14232FFB1D14789300259C27 /* ProfileCardInfoSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCardInfoSection.swift; sourceTree = "<group>"; };
+		14232FFD1D147D5500259C27 /* StyleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleHelper.swift; sourceTree = "<group>"; };
+		142330011D1487BE00259C27 /* ProfileCardDetailsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCardDetailsSection.swift; sourceTree = "<group>"; };
 		A365C8258FA7AC48FFC678B5 /* Pods_CatUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatUserDefaults.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD63F85A65E454B5F09FF9DD /* Pods-CatUserDefaults.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatUserDefaults.release.xcconfig"; path = "Pods/Target Support Files/Pods-CatUserDefaults/Pods-CatUserDefaults.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,8 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				14232FF91D146CEB00259C27 /* App Delegate */,
-				14232FF31D146C1F00259C27 /* FollowButton.swift */,
-				14232FF41D146C1F00259C27 /* ProfileViewController.swift */,
+				142330001D147E4800259C27 /* Common */,
+				14232FFA1D14750D00259C27 /* Views */,
+				14232FFF1D147E3500259C27 /* View Controllers */,
 				14232FF21D146BEB00259C27 /* Supporting Files */,
 			);
 			path = CatUserDefaults;
@@ -74,7 +79,6 @@
 		14232FF21D146BEB00259C27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				140113A41D14668500E6A160 /* Main.storyboard */,
 				140113A71D14668500E6A160 /* Assets.xcassets */,
 				140113A91D14668500E6A160 /* LaunchScreen.storyboard */,
 				140113AC1D14668500E6A160 /* Info.plist */,
@@ -88,6 +92,32 @@
 				140113A01D14668500E6A160 /* AppDelegate.swift */,
 			);
 			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		14232FFA1D14750D00259C27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14232FF31D146C1F00259C27 /* FollowButton.swift */,
+				14232FFB1D14789300259C27 /* ProfileCardInfoSection.swift */,
+				142330011D1487BE00259C27 /* ProfileCardDetailsSection.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		14232FFF1D147E3500259C27 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				14232FF41D146C1F00259C27 /* ProfileViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		142330001D147E4800259C27 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				14232FFD1D147D5500259C27 /* StyleHelper.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		897BAF5C1BEC498C7B7F2D50 /* Frameworks */ = {
@@ -170,7 +200,6 @@
 			files = (
 				140113AB1D14668500E6A160 /* LaunchScreen.storyboard in Resources */,
 				140113A81D14668500E6A160 /* Assets.xcassets in Resources */,
-				140113A61D14668500E6A160 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,21 +260,16 @@
 			files = (
 				140113A11D14668500E6A160 /* AppDelegate.swift in Sources */,
 				14232FF61D146C1F00259C27 /* ProfileViewController.swift in Sources */,
+				142330021D1487BE00259C27 /* ProfileCardDetailsSection.swift in Sources */,
 				14232FF51D146C1F00259C27 /* FollowButton.swift in Sources */,
+				14232FFC1D14789300259C27 /* ProfileCardInfoSection.swift in Sources */,
+				14232FFE1D147D5500259C27 /* StyleHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		140113A41D14668500E6A160 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				140113A51D14668500E6A160 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		140113A91D14668500E6A160 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
