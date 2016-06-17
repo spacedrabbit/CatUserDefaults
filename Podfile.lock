@@ -1,0 +1,15 @@
+PODS:
+  - Locksmith (2.0.8)
+  - SnapKit (0.21.0)
+
+DEPENDENCIES:
+  - Locksmith (~> 2.0.8)
+  - SnapKit (~> 0.21.0)
+
+SPEC CHECKSUMS:
+  Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
+  SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
+
+PODFILE CHECKSUM: 001ee9d26cabffd00e2c9a3e5fa8f72ffacf704f
+
+COCOAPODS: 1.0.1
