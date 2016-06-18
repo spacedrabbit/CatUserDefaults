@@ -75,6 +75,7 @@ class ProfileCardDetailsSection: UIView {
     self.profileHiddenView.addSubview(hiddenAccountLabel)
   }
   
+  
   // MARK: - Actions
   internal func shouldShowContent(showContent: Bool) {
     if showContent == true {
@@ -88,6 +89,7 @@ class ProfileCardDetailsSection: UIView {
       })
     }
   }
+  
   
   // MARK: - Lazy Instances
   // profile hidden
