@@ -26,8 +26,6 @@ internal class UserModel {
   convenience init(withJSON: [String : AnyObject]) {
     self.init()
     
-    
-    
   }
   
   
