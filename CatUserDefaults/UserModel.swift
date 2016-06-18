@@ -134,7 +134,7 @@ internal class UserModel {
     let defaults = NSUserDefaults.standardUserDefaults()
     // TODO: try other NSData encoding options
     let saveData: NSData = NSKeyedArchiver.archivedDataWithRootObject(self.jsonRepresentation())
-    defaults.setObject(saveData, forKey: "userData")
+    defaults.setObject(saveData, forKey: "userData_" + self.userId)
     
     defaults.synchronize() // TOOD: test
   }

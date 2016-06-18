@@ -23,6 +23,7 @@ internal class UserSeedHelper {
               for result in results {
                 if let newUser: UserModel = UserModel(withJSON: result) {
                   print("\n\n\nUser: \(newUser.jsonRepresentation())")
+                  newUser.saveUserToDefaults()
                 }
               }
               
