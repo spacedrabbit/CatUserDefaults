@@ -1,0 +1,220 @@
+{
+  "results": [
+    {
+      "name": {
+        "title": "mr",
+        "first": "levi",
+        "last": "stone"
+      },
+      "location": {
+        "street": "6738 lone wolf trail",
+        "city": "manchester",
+        "state": "north carolina",
+        "postcode": 24560
+      },
+      "email": "levi.stone@example.com",
+      "login": {
+        "username": "greengoose319",
+        "password": "sage",
+        "salt": "mCSy67Wt",
+        "md5": "bd8e0b497a84d4b5310fd419194d6298",
+        "sha1": "a212ff6a8ea1e31c60685104c771694841432582",
+        "sha256": "42fd41ee0ae1d29e9979b2f8a830030b64316b300cc01ca6d7ae7015821bc478"
+      },
+      "registered": 1369762060,
+      "dob": 449536660,
+      "phone": "(334)-039-8930",
+      "cell": "(981)-405-7914",
+      "id": {
+        "name": "SSN",
+        "value": "290-49-4738"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/40.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/40.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/40.jpg"
+      }
+    },
+    {
+      "name": {
+        "title": "mr",
+        "first": "jackson",
+        "last": "morrison"
+      },
+      "location": {
+        "street": "6666 hickory creek dr",
+        "city": "evansville",
+        "state": "connecticut",
+        "postcode": 40533
+      },
+      "email": "jackson.morrison@example.com",
+      "login": {
+        "username": "silverfrog705",
+        "password": "capslock",
+        "salt": "Y5tnT34Y",
+        "md5": "04e55ea47bd18684f8e7b75e51f14806",
+        "sha1": "d033077b5b77bd20090f0281218ab6f03c299cc2",
+        "sha256": "3ca20548ea840fe1ae13c658a18c4b1bc83b73f39af74bd300799b0f4d7c66c2"
+      },
+      "registered": 1409489790,
+      "dob": 1111206405,
+      "phone": "(715)-723-2072",
+      "cell": "(918)-362-5142",
+      "id": {
+        "name": "SSN",
+        "value": "984-03-7052"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/66.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/66.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/66.jpg"
+      }
+    },
+    {
+      "name": {
+        "title": "miss",
+        "first": "heidi",
+        "last": "matthews"
+      },
+      "location": {
+        "street": "9855 eason rd",
+        "city": "sunnyvale",
+        "state": "louisiana",
+        "postcode": 75862
+      },
+      "email": "heidi.matthews@example.com",
+      "login": {
+        "username": "organicgorilla496",
+        "password": "blackjac",
+        "salt": "WfLlR6U3",
+        "md5": "d62fa3c5cff043b57c994d6e1ed901fd",
+        "sha1": "d78d6bc6ab0076e2c3f56fc26aba9ad966f08dd1",
+        "sha256": "7602e254857e6a3756a1ed6e321d05de7955050bc7c1ca82b238e327a99986af"
+      },
+      "registered": 1298958071,
+      "dob": 392155212,
+      "phone": "(210)-541-2084",
+      "cell": "(815)-215-5019",
+      "id": {
+        "name": "SSN",
+        "value": "858-35-2880"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/65.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/65.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/65.jpg"
+      }
+    },
+    {
+      "name": {
+        "title": "ms",
+        "first": "roberta",
+        "last": "snyder"
+      },
+      "location": {
+        "street": "8762 northaven rd",
+        "city": "pompano beach",
+        "state": "vermont",
+        "postcode": 92330
+      },
+      "email": "roberta.snyder@example.com",
+      "login": {
+        "username": "bigswan571",
+        "password": "4you",
+        "salt": "7lYEnJdC",
+        "md5": "d6f5c7df2f63b97856cba7e2da56da7b",
+        "sha1": "9042b350d74734b25a286ec8c871f0c319c4acc7",
+        "sha256": "e1591a0585af1341f67d7fced6a0a448a13984bb38674077593ef36c4b4b871b"
+      },
+      "registered": 1086197007,
+      "dob": 773039317,
+      "phone": "(820)-684-6088",
+      "cell": "(177)-147-3752",
+      "id": {
+        "name": "SSN",
+        "value": "423-48-6768"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/2.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/2.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/2.jpg"
+      }
+    },
+    {
+      "name": {
+        "title": "mrs",
+        "first": "vera",
+        "last": "morrison"
+      },
+      "location": {
+        "street": "7001 w sherman dr",
+        "city": "shiloh",
+        "state": "kansas",
+        "postcode": 63175
+      },
+      "email": "vera.morrison@example.com",
+      "login": {
+        "username": "purplecat178",
+        "password": "delaware",
+        "salt": "YIKvBwHP",
+        "md5": "cfd96c95fd95a069a049a96c50927195",
+        "sha1": "b2caed325de971b5378048faaead69a9c0b25f35",
+        "sha256": "44bd6d69faf4cdd3bc9b04964a2b464dff75569c494ced3d325d9ada151b2c7a"
+      },
+      "registered": 1244817870,
+      "dob": 1093395708,
+      "phone": "(233)-414-5788",
+      "cell": "(502)-397-9827",
+      "id": {
+        "name": "SSN",
+        "value": "659-39-2837"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/77.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/77.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/77.jpg"
+      }
+    },
+    {
+      "name": {
+        "title": "ms",
+        "first": "wanda",
+        "last": "hill"
+      },
+      "location": {
+        "street": "6112 saddle dr",
+        "city": "mesa",
+        "state": "rhode island",
+        "postcode": 74095
+      },
+      "email": "wanda.hill@example.com",
+      "login": {
+        "username": "smallpeacock595",
+        "password": "happy",
+        "salt": "H4BnwE9I",
+        "md5": "b60b9e4bfdd69eb0dcb3f09375f93306",
+        "sha1": "0b4b1abfabf618576cbeecdce83121338ddc4ec5",
+        "sha256": "4458d999816f74c3e1e84c1fba615a83c6a491c0886208000ac267e736517f64"
+      },
+      "registered": 1262624566,
+      "dob": 167678737,
+      "phone": "(088)-681-1731",
+      "cell": "(847)-263-4230",
+      "id": {
+        "name": "SSN",
+        "value": "975-59-0149"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/48.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/48.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/48.jpg"
+      }
+    }
+  ],
+  "info": {
+    "seed": "19cadd5fc5287596",
+    "results": 6,
+    "page": 1,
+    "version": "1.0"
+  }
+}

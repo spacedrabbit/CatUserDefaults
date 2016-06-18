@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let profileViewController: ProfileViewController = ProfileViewController()
     self.window?.rootViewController = profileViewController
     
+    UserSeedHelper.loadUserSeedData()
+    
     self.window?.makeKeyAndVisible()
     
     return true

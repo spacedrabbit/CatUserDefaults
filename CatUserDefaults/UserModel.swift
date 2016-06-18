@@ -17,13 +17,21 @@ func ==(lhs: UserModel, rhs: UserModel) -> Bool {
 internal class UserModel {
   
   private var userId: String = ""
-  private var paymentDetails: String = ""
+  private var paymentDetails: String = "MC X-3234"
+  private var md5: String = ""
+  
   internal private (set) var firstName: String = ""
   internal private (set) var lastName: String = ""
+  internal private (set) var state: String = ""
+  internal private (set) var city: String = ""
+  
   internal private (set) var username: String = ""
+  internal private (set) var email: String = ""
+  internal private (set) var profileImage: String = ""
+  internal private (set) var phone: String = ""
+  
   internal private (set) var following: [UserModel] = []
   internal private (set) var followers: [UserModel] = []
-  internal private (set) var email: String = ""
   
   private init() {
   }
@@ -31,38 +39,64 @@ internal class UserModel {
   convenience init?(withJSON json: [String : AnyObject]) {
     self.init()
     
-    guard let userInfo: [String : AnyObject] = json["user"] as? [String : AnyObject] else {
-      return
-    }
-    
-    guard let fName: String = userInfo["firstName"] as? String,
-      let lName: String = userInfo["lastName"] as? String,
-      let uName: String = userInfo["username"] as? String,
-      let emailAdd: String = userInfo["email"] as? String,
-      let id: String = userInfo["userId"] as? String,
-      let payment: String = userInfo["paymentDetails"] as? String else {
+    guard let nameInfo: [String : AnyObject] = json["name"] as? [String : AnyObject],
+      let locationInfo: [String : AnyObject] = json["location"] as? [String : AnyObject],
+      let loginInfo: [String: AnyObject] = json["login"] as? [String : AnyObject],
+      let emailInfo: String = json["email"] as? String,
+      let cellInfo: String = json["phone"] as? String,
+      let idInfo: [String : AnyObject] = json["id"] as? [String : AnyObject],
+      let pictureInfo: [String : AnyObject] = json["picture"] as? [String : AnyObject] else {
         return
     }
+    // contact
+    self.email = emailInfo
+    self.phone = cellInfo
     
+    // name
+    guard let fName: String = nameInfo["first"] as? String,
+      let lName: String = nameInfo ["last"] as? String else {
+        return
+    }
     self.firstName = fName
     self.lastName = lName
+    
+    // location
+    guard let stateInfo: String = locationInfo["state"] as? String,
+      let cityInfo: String = locationInfo["city"] as? String else {
+        return
+    }
+    self.state = stateInfo
+    self.city = cityInfo
+    
+    // login details 
+    guard let user: String = loginInfo["username"] as? String,
+      let userMd5: String = loginInfo["md5"] as? String else {
+        return
+    }
+    self.username = user
+    self.md5 = userMd5
+
+    // userId
+    guard let id: String = idInfo["value"] as? String else {
+      return
+    }
     self.userId = id
-    self.username = uName
-    self.email = emailAdd
-    self.paymentDetails = payment
+    
+    guard let photoLarge: String = pictureInfo["large"] as? String else { return }
+    self.profileImage = NSString(string: photoLarge).lastPathComponent // "XX.jpg"
   }
   
-  private func jsonRepresentation() -> [String : AnyObject] {
-    return [ "user" :
-      [ "firstName" : firstName,
-        "lastName" : lastName,
-        "email" : email,
-        "paymentDetails" : paymentDetails,
-        "username" : username,
-        "userId" : userId,
-        "following" : following,
-        "followers" : followers
-      ]
+  internal func jsonRepresentation() -> [String : AnyObject] {
+    return [
+      "name" : [ "first" : firstName, "last" : lastName ],
+      "location" : [ "state" : state, "city" : city],
+      "email" : email,
+      "phone" : phone,
+      "login" : [ "id" : userId, "md5" : md5],
+      "picture" : profileImage,
+      "payment" : paymentDetails,
+      "following" : following,
+      "followers" : followers
     ]
   }
   
