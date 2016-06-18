@@ -31,13 +31,17 @@ internal class UserModel {
   convenience init?(withJSON json: [String : AnyObject]) {
     self.init()
     
-    guard let fName: String = json[" "] as? String,
-      let lName: String = json[" "] as? String,
-    let uName: String = json[" "] as? String,
-    let emailAdd: String = json[" "] as? String,
-    let id: String = json[" "] as? String,
-    let payment: String = json[" "] as? String else {
+    guard let userInfo: [String : AnyObject] = json["user"] as? [String : AnyObject] else {
       return
+    }
+    
+    guard let fName: String = userInfo["firstName"] as? String,
+      let lName: String = userInfo["lastName"] as? String,
+      let uName: String = userInfo["username"] as? String,
+      let emailAdd: String = userInfo["email"] as? String,
+      let id: String = userInfo["userId"] as? String,
+      let payment: String = userInfo["paymentDetails"] as? String else {
+        return
     }
     
     self.firstName = fName
@@ -48,6 +52,22 @@ internal class UserModel {
     self.paymentDetails = payment
   }
   
+  private func jsonRepresentation() -> [String : AnyObject] {
+    return [ "user" :
+      [ "firstName" : firstName,
+        "lastName" : lastName,
+        "email" : email,
+        "paymentDetails" : paymentDetails,
+        "username" : username,
+        "userId" : userId,
+        "following" : following,
+        "followers" : followers
+      ]
+    ]
+  }
+  
+  
+  // follower actions
   internal func addFollower(user: UserModel) -> [UserModel] {
     self.followers.append(user)
     return self.followers
@@ -61,6 +81,7 @@ internal class UserModel {
   }
   
   
+  // following actions
   internal func followUser(user: UserModel) -> [UserModel] {
     self.following.append(user)
     return self.following
@@ -73,4 +94,31 @@ internal class UserModel {
     return self.following
   }
   
+  
+  // MARK: - Persistance
+  internal func saveUserToDefaults() {
+    let defaults = NSUserDefaults.standardUserDefaults()
+    // TODO: try other NSData encoding options
+    let saveData: NSData = NSKeyedArchiver.archivedDataWithRootObject(self.jsonRepresentation())
+    defaults.setObject(saveData, forKey: "userData")
+    
+    defaults.synchronize() // TOOD: test
+  }
+  
+  internal class func loadUserFromDefaults() -> UserModel? {
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
+    if let userData: NSData = defaults.objectForKey("userData") as? NSData {
+      if let userJson: [String : AnyObject] = NSKeyedUnarchiver.unarchiveObjectWithData(userData) as? [String : AnyObject] {
+        if let restoredUser: UserModel = UserModel(withJSON: userJson) {
+          return restoredUser
+        }
+      }
+    }
+    return nil
+  }
+  
+  
+  // MARK: - Locksmith Persistance
+  // TODO: this
 }
