@@ -42,22 +42,26 @@ class ProfileCardDetailsSection: UIView {
   // MARK: - Layout
   internal func configureConstraints() {
     
+    
+    
     self.profileHiddenView.snp_makeConstraints { (make) in
       make.top.left.equalTo(self).offset(16.0)
       make.bottom.right.equalTo(self).inset(16.0)
     }
     
+    self.alignmentView.snp_makeConstraints { (make) in
+      make.center.equalTo(self.profileHiddenView)
+    }
+    
     self.lockIconImageView.snp_makeConstraints { (make) in
-      make.top.greaterThanOrEqualTo(profileHiddenView).offset(16.0).priority(990.0)
-      make.centerX.equalTo(profileHiddenView)
+      make.centerX.equalTo(alignmentView)
       make.size.equalTo(CGSizeMake(20.0, 20.0))
+      make.top.equalTo(alignmentView)
     }
     
     self.hiddenAccountLabel.snp_makeConstraints { (make) in
-      make.top.equalTo(lockIconImageView.snp_bottom).offset(8.0).priorityRequired()
-      make.bottom.lessThanOrEqualTo(profileHiddenView).offset(-16.0).priority(980.0)
-      make.left.right.equalTo(profileHiddenView)
-      make.centerX.equalTo(lockIconImageView)
+      make.top.equalTo(lockIconImageView.snp_bottom).offset(8.0)
+      make.centerX.bottom.left.right.equalTo(alignmentView)
     }
     
     self.scrollingContent.snp_makeConstraints { (make) in
@@ -71,8 +75,10 @@ class ProfileCardDetailsSection: UIView {
     self.addSubview(profileHiddenView)
     self.addSubview(scrollingContent)
     
-    self.profileHiddenView.addSubview(lockIconImageView)
-    self.profileHiddenView.addSubview(hiddenAccountLabel)
+    self.profileHiddenView.addSubview(alignmentView)
+    
+    self.alignmentView.addSubview(lockIconImageView)
+    self.alignmentView.addSubview(hiddenAccountLabel)
   }
   
   
@@ -95,7 +101,12 @@ class ProfileCardDetailsSection: UIView {
   // profile hidden
   internal lazy var profileHiddenView: UIView = {
     let view: UIView = UIView()
-    view.backgroundColor = UIColor.redColor()
+    view.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.25)
+    return view
+  }()
+  
+  internal lazy var alignmentView: UIView = {
+    let view: UIView = UIView()
     return view
   }()
   

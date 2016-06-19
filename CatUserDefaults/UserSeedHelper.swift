@@ -37,7 +37,9 @@ internal class UserSeedHelper {
         
       }
     }
-    
+  }
+  
+  internal class func saveUser(user: UserModel) {
     
   }
   
